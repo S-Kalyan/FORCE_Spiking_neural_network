@@ -26,12 +26,13 @@ freq1 = 1
 freq2 = 4
 Q = 10
 G = 0.04
-target1 = np.sin(2 * np.pi * np.linspace(1, nt, nt) * dt * freq1).reshape(1, -1)
-target2 = np.sin(2 * np.pi * np.linspace(1, nt, nt) * dt * freq1).reshape(1, -1)
-target = np.vstack((target1, target2))
+# target1 = np.sin(2 * np.pi * np.linspace(1, nt, nt) * dt * freq1).reshape(1, -1)
+# target2 = np.sin(2 * np.pi * np.linspace(1, nt, nt) * dt * freq1).reshape(1, -1)
+# target = np.vstack((target1, target2))
+target = np.sin(2 * np.pi * np.linspace(1, nt, nt) * dt * freq1).reshape(1, -1)
 # input
-input1 = 0.1 * np.ones_like(target1)
-input2 = 0.4 * np.ones_like(target2)
-inputs = np.vstack((input1, input2))
+# input1 = 0.1 * np.ones_like(target1)
+# input2 = 0.4 * np.ones_like(target2)
+# inputs = np.vstack((input1, input2))
 
 # print(b.shape)

@@ -46,7 +46,7 @@ class Population(object):
         self.BIAS = vpeak  # BIAS current, can help decrease/increase firing, 0 is fine
 
     def update_v_get_spikes(self, i):
-        I = self.IPSC + self.E * self.z + self.BIAS + np.repeat(self.inputscurr[:,i].reshape(-1,1),self.N,0)
+        I = self.IPSC + self.E * self.z + self.BIAS
         dv = (dt * (i + 1) > (self.tlast + tref)) * (-self.v + I) / tm  # voltage equation
         self.v = self.v + dt * dv
         index = np.where(self.v >= vpeak)[0].reshape(-1, 1)  # neurons that reached threshold
